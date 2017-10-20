@@ -1,2 +1,12 @@
 ---
-lucky-word: Irish
+spring:
+  profiles:east  
+  lucky-word:Irish
+---
+spring:
+  profiles:west  
+  lucky-word:Rabbit's Foot
+---
+spring:
+  profiles:north  
+  lucky-word:Serendipity
