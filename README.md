@@ -64,10 +64,12 @@ Exemplo:
 @RequestMapping(method = RequestMethod.GET)
 public ResponseEntity<?> createTenant(@LogParam(key = "TenantCreationResouce", method = "name") @Valid @RequestBody TenantCreationResource resource){
 ...
+
 Obs: Neste primeiro exemplo notamos que são passado 2 parâmetros pela anotação LogParam. O parâmetro key recebe o valor "TenantCreationResouce", que tem como finalidade de apenas registro no log, e o parametro method que recebe o valor de "name", que é o nome do atributo que consta na entidade TenantCreationResource informada no parâmetro do método, onde o componente se encarrega de fazer executar o método GET relacionado ao parâmetro informado.
 
 
 @RequestMapping(method = RequestMethod.DELETE, value = "/{id}")
 public ResponseEntity<?> deleteTenant(@LogParam(key = "tenantId") String tenantId){
 ...
+
 Obs: Neste segundo exemplo notamos que apenas o parâmetro key foi chamado, onde este parâmetro (a String tenantId) será registrado no log e seu valor passado por parâmetro, interceptado e registrado no log.
